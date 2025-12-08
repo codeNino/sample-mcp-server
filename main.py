@@ -8,9 +8,10 @@ async def main():
     # Create MCP client
     client = MultiServerMCPClient(
         {
-        "weather": {
+        "srv": {
                 "transport": "streamable_http",
-                "url": "http://localhost:8000/mcp",
+                # "url": "https://sample-mcp-server-xny6.onrender.com/mcp",
+            "url": "http://localhost:8000/mcp",
             }
         }
     )
@@ -18,18 +19,6 @@ async def main():
     # Fetch tools from the MCP server
     tools = await client.get_tools()
     print("Loaded tools:", tools)
-    # for t in tools:
-    #     print(" -", t.name)
-
-#     agent = create_agent(
-#     "claude-sonnet-4-5-20250929",
-#     tools  
-# )
-#     response = await agent.ainvoke(
-#     {"messages": [{"role": "user", "content": "Add 14 and 17"}]}
-# )
-
-
 
 
 if __name__ == "__main__":
