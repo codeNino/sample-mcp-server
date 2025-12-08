@@ -7,4 +7,7 @@ requires-python = ">=3.11"
 dependencies = [
     "fastapi>=0.124.0",
     "fastmcp>=2.13.3",
+    "langchain>=1.1.2",
+    "langchain-mcp-adapters>=0.1.14",
+    "mcp>=1.22.0",
 ]
